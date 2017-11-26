@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+import { connect } from 'react-redux';
+]]>
+  </content>
+  <tabTrigger>import-connect</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Import connect</description>
+</snippet>

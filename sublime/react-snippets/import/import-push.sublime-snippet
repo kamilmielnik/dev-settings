@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+import { push } from 'react-router-redux';
+]]>
+  </content>
+  <tabTrigger>import-push</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Import push</description>
+</snippet>
