@@ -4,20 +4,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const ${1:Component} = ({ ${2} }) => (
-  <${6:div}>${0}</${6:div}>
+const ${1:Component} = ({ ${5} }) => (
+  <${6:div}>
+    ${0}
+  </${6:div}>
 );
 
 ${1:Component}.propTypes = {
-  ${3}
+  ${2}
 };
 
 const mapStateToProps = (state) => ({
-  ${4}
+  ${3}
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  ${5}
+  ${4}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
@@ -26,5 +28,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
   </content>
   <tabTrigger>crfc</tabTrigger>
   <scope>source.js, source.jsx</scope>
-  <description>Connected React functional component</description>
+  <description>Connected React Functional Component</description>
 </snippet>

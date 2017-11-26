@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+class ${1:Component} extends Component {
+  static propTypes = {
+    ${2}
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { ${5} } = this.props;
+
+    return (
+      <${6:div}>
+        ${0}
+      </${6:div}>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  ${3}
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  ${4}
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
+
+]]>
+  </content>
+  <tabTrigger>crc</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Connected React Component</description>
+</snippet>

@@ -6,22 +6,22 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import styles from './styles.scss';
 
-const ${1:Component} = ({ className${2} }) => (
+const ${1:Component} = ({ className${5} }) => (
   <${6:div} className={classNames(styles.${1/.*/\l$&/g}, className)}>
     ${0}
   </${6:div}>
 );
 
 ${1:Component}.propTypes = {
-  className: PropTypes.string${3}
+  className: PropTypes.string${2}
 };
 
 const mapStateToProps = (state) => ({
-  ${4}
+  ${3}
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  ${5}
+  ${4}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
@@ -30,5 +30,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
   </content>
   <tabTrigger>crfcc</tabTrigger>
   <scope>source.js, source.jsx</scope>
-  <description>Connected React functional component with className</description>
+  <description>Connected React Functional Component with className</description>
 </snippet>

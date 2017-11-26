@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+class ${1:Component} extends Component {
+  static propTypes = {
+    ${2}
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { ${3} } = this.props;
+
+    return (
+      <${4:div}>
+        ${0}
+      </${4:div}>
+    );
+  }
+}
+
+export default ${1:Component};
+
+]]>
+  </content>
+  <tabTrigger>rc</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>React Component</description>
+</snippet>

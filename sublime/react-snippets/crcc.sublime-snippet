@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { connect } from 'react-redux';
+import styles from './styles.scss';
+
+class ${1:Component} extends Component {
+  static propTypes = {
+    className: PropTypes.string${2}
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { className${5} } = this.props;
+
+    return (
+      <${6:div} className={classNames(styles.${1/.*/\l$&/g}, className)}>
+        ${0}
+      </${6:div}>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  ${3}
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  ${4}
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
+
+]]>
+  </content>
+  <tabTrigger>crcc</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Connected React Component with className</description>
+</snippet>
