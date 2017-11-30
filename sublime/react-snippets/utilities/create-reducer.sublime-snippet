@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+import { createAction, handleActions } from 'redux-actions';
+
+const initialState = ${1};
+
+export default handleActions({
+  ${0}
+}, initialState);
+]]>
+  </content>
+  <tabTrigger>create-reducer</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Create reducer</description>
+</snippet>

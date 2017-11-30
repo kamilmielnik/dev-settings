@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+isRequired
+]]>
+  </content>
+  <tabTrigger>isRequired</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>isRequired</description>
+</snippet>

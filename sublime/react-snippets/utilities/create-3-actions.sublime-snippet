@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+export const ${1:LOAD} = 'auth/${1/.*/\L$&/g}';
+export const ${1:LOAD}_FAILURE = 'auth/${1/.*/\L$&/g}-failure';
+export const ${1:LOAD}_SUCCESS = 'auth/${1/.*/\L$&/g}-success';
+
+export const ${1/.*/\L$&/g} = createAction(${1});
+export const ${1/.*/\L$&/g}Failure = createAction(${1}_FAILURE);
+export const ${1/.*/\L$&/g}Success = createAction(${1}_SUCCESS);
+]]>
+  </content>
+  <tabTrigger>create-3-actions</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+  <description>Create 3 actions</description>
+</snippet>
