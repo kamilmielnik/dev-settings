@@ -1,19 +1,18 @@
 [user]
-	name = Kamil Mielnik
-	email = kamil.adam.mielnik@gmail.com
+  name = Kamil Mielnik
+  email = kamil.adam.mielnik@gmail.com
 [core]
-	autocrlf = false
+  autocrlf = false
 [alias]
-	l = log -10 --oneline
-	ls = diff-tree --no-commit-id --name-only -r
-	s = status
-	a = add .
-	co = checkout
-	c = commit -m
-	amend = commit --amend
-	p = pull origin master
+  l = log -10 --oneline
+  ls = diff-tree --no-commit-id --name-only -r
+  s = status
+  a = add .
+  co = checkout
+  c = commit -m
+  amend = commit --amend
+  p = pull origin master
 [http]
-	sslVerify = true
-
+  sslVerify = true
 [push]
-	default = simple
+  default = simple

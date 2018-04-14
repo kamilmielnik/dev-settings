@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-export const ${1:LOAD} = 'auth/${1/.*/\L$&/g}';
-export const ${1:LOAD}_FAILURE = 'auth/${1/.*/\L$&/g}-failure';
-export const ${1:LOAD}_SUCCESS = 'auth/${1/.*/\L$&/g}-success';
+export const ${1:LOAD} = '${2} /${1/.*/\L$&/g}';
+export const ${1:LOAD}_FAILURE = '${2}/${1/.*/\L$&/g}-failure';
+export const ${1:LOAD}_SUCCESS = '${2}/${1/.*/\L$&/g}-success';
 
 export const ${1/.*/\L$&/g} = createAction(${1});
 export const ${1/.*/\L$&/g}Failure = createAction(${1}_FAILURE);
