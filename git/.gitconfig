@@ -9,10 +9,11 @@
   s = status
   a = add .
   co = checkout
-  c = commit -m
+  c = commit -m 
   amend = commit --amend
   p = pull origin master
 [http]
   sslVerify = true
+
 [push]
-  default = simple
+  default = current
