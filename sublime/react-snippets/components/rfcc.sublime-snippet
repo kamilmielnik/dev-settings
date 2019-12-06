@@ -3,7 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './styles.scss';
+
+import styles from './${1:Component}.module.scss';
 
 const ${1:Component} = ({ className${3} }) => (
   <${4:div} className={classNames(styles.${1/.*/\l$&/g}, className)}>

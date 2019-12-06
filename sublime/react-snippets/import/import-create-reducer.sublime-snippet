@@ -4,6 +4,6 @@ import { createAction, handleActions } from 'redux-actions';
 ]]>
   </content>
   <tabTrigger>import-create-reducer</tabTrigger>
-  <scope>source.js, source.jsx</scope>
+  <scope>source.js, source.jsx, source.ts, source.tsx</scope>
   <description>Import createAction & handleActions</description>
 </snippet>

@@ -4,7 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import styles from './styles.scss';
+
+import styles from './${1:Component}.module.scss';
 
 const ${1:Component} = ({ className${5} }) => (
   <${6:div} className={classNames(styles.${1/.*/\l$&/g}, className)}>
