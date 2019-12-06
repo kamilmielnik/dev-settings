@@ -1,0 +1,7 @@
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias nr='npm run'
+alias sublime='NODE_PATH=$NODE_PATH subl'
+alias lint='npm run lint'
+alias vpn='sudo protonvpn-cli -c'
