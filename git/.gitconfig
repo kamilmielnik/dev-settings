@@ -5,11 +5,10 @@
   autocrlf = false
 [alias]
   l = log -10 --oneline
-  ls = diff-tree --no-commit-id --name-only -r
   s = status
   a = add .
   co = checkout
-  c = commit -m 
+  c = commit -m
   amend = commit --amend
   p = pull origin master
 [http]
