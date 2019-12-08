@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import styles from './${1:Component}.module.scss';
 
 interface Props {
-  className: string;${2}
+  className?: string;${2}
 };
 
 class ${1:Component} extends Component<Props> {
