@@ -1,1 +1,1 @@
-NODE_PATH=$HOME/.nvm/versions/node/v12.14.0/bin/node
+# NODE_PATH="$HOME/.nvm/versions/node/12.14.0/bin/node"
