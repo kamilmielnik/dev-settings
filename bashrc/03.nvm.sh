@@ -8,7 +8,7 @@ DISABLE_NOTIFIER=true
 
 cdnvm() {
     cd "$@";
-    nvm_version=$(/home/kamil/.nvm/versions/node/v8.16.0/bin/node $HOME/bashrc/nvm/index.js)
+    nvm_version=$($HOME/.nvm/versions/node/v12.14.0/bin/node $HOME/bashrc/nvm/index.js)
 
     if [[ "$nvm_version" != "N/A" ]]; then
         nvm use "$nvm_version";
