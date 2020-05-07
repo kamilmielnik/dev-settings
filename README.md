@@ -3,8 +3,8 @@ My settings for various development tools
 
 ## Set up .bashrc
 ```
-touch ~/.nvmrc
-echo '12.14.0' >> ~/.nvmrc
+touch ~/.node-version
+echo '12.14.0' >> ~/.node-version
 
 echo '' >> ~/.bashrc
 echo 'for filename in ~/projects/dev-settings/bashrc/*.sh ; do' >> ~/.bashrc
