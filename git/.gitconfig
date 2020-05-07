@@ -13,6 +13,9 @@
   p = pull origin master
 [http]
   sslVerify = true
-
 [push]
-  default = current
+  default = simple
+[diff]
+  tool = meld
+[cola]
+  spellcheck = false
