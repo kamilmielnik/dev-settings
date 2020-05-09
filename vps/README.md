@@ -121,6 +121,46 @@ npm run build
 ln -s /projects/cv/build /var/www/cv
 ```
 
+### Setup [scrabble-solver](https://github.com/kamilmielnik/scrabble-solver)
+1. Clone it
+```Shell
+git clone git@github.com:kamilmielnik/scrabble-solver.git /projects/scrabble-solver/
+```
+
+3. Use v1
+```Shell
+cd /projects/scrabble-solver/
+git checkout v1
+```
+
+4. Install it
+```Shell
+cd /projects/scrabble-solver/
+npm i
+npm run install-dictionaries
+cd /projects/scrabble-solver/scrabble-solver-backend
+npm i
+cd /projects/scrabble-solver/scrabble-solver-frontend
+npm i
+cd /projects/scrabble-solver/
+```
+
+3. Build it
+```Shell
+npm run build:prod
+```
+
+4. Link it in `/var/www`
+```Shell
+ln -s /projects/scrabble-solver/dist/scrabble-solver-frontend /var/www/scrabble-solver
+```
+
+5. Run backend server
+```Shell
+node /projects/scrabble-solver/dist/scrabble-solver-backend/index.js /projects/scrabble-solver/dictionaries/
+```
+
+
 ## Setup nginx + letsencrypt
 1. Install certbot
 - https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
@@ -151,6 +191,7 @@ ln -s ~/projects/dev-settings/vps/nginx/nginx.conf /etc/nginx/nginx.conf
 5. Remove default site
 ```Shell
 rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+rm -rf /var/www/html
 ```
 
 6. Setup sites
