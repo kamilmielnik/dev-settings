@@ -4,7 +4,6 @@ server {
     index index.html;
 
     location / {
-        proxy_cache nginx_cache;
         try_files $uri $uri/ =404;
     }
 
