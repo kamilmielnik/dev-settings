@@ -164,6 +164,12 @@ ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
 
+8. Add `renew-certificates.sh` to daily crontab
+```Shell
+chmod 755 ~/projects/dev-settings/vps/nginx/renew-certificates.sh
+ln -s ~/projects/dev-settings/vps/nginx/renew-certificates.sh /etc/cron.daily/renew-certificates.sh
+```
+
 ### Useful commands
 ```Shell
 # check nginx status
