@@ -142,8 +142,9 @@ sudo certbot certonly --standalone
 sudo apt-get install -y nginx
 ```
 
-4. Copy `nginx.conf`
+4. Replace `nginx.conf`
 ```Shell
+rm /etc/nginx/nginx.conf
 ln -s ~/projects/dev-settings/vps/nginx/nginx.conf /etc/nginx/nginx.conf
 ```
 
