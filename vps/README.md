@@ -173,7 +173,7 @@ cat /var/log/nginx/access.log
 sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'Nginx HTTPS'
 sudo ufw allow 'OpenSSH'
-sudo ufw enable
+sudo ufw enable -y
 ```
 
 ### Useful commands
