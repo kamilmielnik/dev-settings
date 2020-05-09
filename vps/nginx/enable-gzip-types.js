@@ -9,5 +9,5 @@ const mimeTypes = fs
   .match(/\S+\/\S+/gm);
 const updatedNginxConf = fs
   .readFileSync(NGINX_CONF_FILEPATH, "utf-8")
-  .replace(/.*gzip_types.*/gm, mimeTypes.join(" "));
+  .replace(/.*gzip_types.*/gm, `\tgzip_types ${mimeTypes.join(" ")};`);
 fs.writeFileSync(NGINX_CONF_FILEPATH, updatedNginxConf);
