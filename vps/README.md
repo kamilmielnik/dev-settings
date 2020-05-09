@@ -122,23 +122,42 @@ npm run build
 ln -s /projects/cv/build /var/www/cv
 ```
 
-## Setup nginx
-1. Install it
+## Setup nginx + letsencrypt
+1. Install certbot
+- https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
+```Shell
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get install -y certbot
+```
+
+2. Run certbot
+```Shell
+sudo certbot certonly --standalone
+```
+- `kamilmielnik.com, kamilmielnik.pl, cv.kamilmielnik.com, cv.kamilmielnik.pl, scrabble-solver.kamilmielnik.com, scrabble-solver.kamilmielnik.pl`
+
+3. Install nginx
 ```Shell
 sudo apt-get install -y nginx
 ```
 
-2. Remove default site
+4. Remove default site
 ```Shell
 rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
 ```
 
-3. Setup sites
+5. Setup sites
 ```Shell
-ln -s ~projects/dev-settings/vps/sites-available/* /etc/nginx/sites-available/
+ln -s ~/projects/dev-settings/vps/nginx/sites-available/* /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 ```
 
+6. Restart nginx
+```Shell
+sudo systemctl restart nginx
+```
 
 ### Useful commands
 ```Shell
