@@ -13,12 +13,7 @@ server {
 }
 
 server {
-    if ($host = cv.kamilmielnik.pl) {
-        return 301 https://$host$request_uri;
-    }
-
-    server_name cv.kamilmielnik.pl;
-
     listen 80;
-    return 404;
+    server_name cv.kamilmielnik.pl;
+    return 301 https://cv.kamilmielnik.pl$request_uri;
 }

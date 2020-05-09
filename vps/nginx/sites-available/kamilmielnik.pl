@@ -13,12 +13,7 @@ server {
 }
 
 server {
-    if ($host = kamilmielnik.pl) {
-        return 301 https://$host$request_uri;
-    }
-
-    server_name kamilmielnik.pl;
-
     listen 80;
-    return 404;
+    server_name kamilmielnik.pl;
+    return 301 https://kamilmielnik.pl$request_uri;
 }
