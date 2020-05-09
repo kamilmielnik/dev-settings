@@ -142,24 +142,29 @@ sudo certbot certonly --standalone
 sudo apt-get install -y nginx
 ```
 
-4. Replace `nginx.conf`
+4. Create cache directory
+```Shell
+mkdir /tmp/nginx_cache
+```
+
+5. Replace `nginx.conf`
 ```Shell
 rm /etc/nginx/nginx.conf
 ln -s ~/projects/dev-settings/vps/nginx/nginx.conf /etc/nginx/nginx.conf
 ```
 
-5. Remove default site
+6. Remove default site
 ```Shell
 rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
 ```
 
-6. Setup sites
+7. Setup sites
 ```Shell
 ln -s ~/projects/dev-settings/vps/nginx/sites-available/* /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 ```
 
-7. Restart nginx
+8. Restart nginx
 ```Shell
 sudo systemctl restart nginx
 ```
