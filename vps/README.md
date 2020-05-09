@@ -153,7 +153,12 @@ ln -s ~/projects/dev-settings/vps/nginx/sites-available/* /etc/nginx/sites-avail
 ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 ```
 
-6. Restart nginx
+6. Enable gzip for all mime types
+```Shell
+node ~/projects/dev-settings/vps/nginx/enable-all-gzip-mime-types.js 
+```
+
+7. Restart nginx
 ```Shell
 sudo systemctl restart nginx
 ```
