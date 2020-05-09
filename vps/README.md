@@ -70,6 +70,7 @@ cat ~/.ssh/id_rsa.pub
 5. Copy the SSH key and add it to GitHub: https://github.com/settings/ssh/new
 
 ## Setup projects
+
 ### Setup [dev-settings](https://github.com/kamilmielnik/dev-settings/)
 1. Clone it
 ```Shell
@@ -122,14 +123,21 @@ ln -s /projects/cv/build /var/www/cv
 ```
 
 ## Setup nginx
-
-
 1. Install it
 ```Shell
 sudo apt-get install -y nginx
 ```
 
-2. 
+2. Remove default site
+```Shell
+rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+```
+
+3. Setup sites
+```Shell
+ln -s ~projects/dev-settings/vps/sites-available/* /etc/nginx/sites-available/
+ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+```
 
 
 ### Useful commands
