@@ -20,7 +20,6 @@ sudo apt-get upgrade -y
 mkdir /var/www
 mkdir ~/projects
 mkdir /projects
-chmod -R 777 /projects
 ```
 
 
