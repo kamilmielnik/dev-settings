@@ -122,13 +122,54 @@ ln -s /projects/cv/build /var/www/cv
 ```
 
 ## Setup nginx
-TODO
+
+
+1. Install it
+```Shell
+sudo apt-get install -y nginx
+```
+
+2. 
+
+
+### Useful commands
+```Shell
+# check nginx status
+systemctl status nginx
+
+# stop server
+sudo systemctl stop nginx
+
+# start server
+sudo systemctl start nginx
+
+# restart server
+sudo systemctl restart nginx
+
+# reload config
+sudo systemctl reload nginx
+
+# test config syntax
+sudo nginx -t
+
+# show error.log
+cat /var/log/nginx/error.log
+
+# show access.log
+cat /var/log/nginx/access.log
+```
 
 ## Setup firewall
+
 ```Shell
 sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'Nginx HTTPS'
 sudo ufw allow 'OpenSSH'
 sudo ufw enable
+```
+
+### Useful commands
+```Shell
+# Show firewall status
 sudo ufw status
 ```
