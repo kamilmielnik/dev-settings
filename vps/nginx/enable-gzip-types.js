@@ -10,4 +10,4 @@ const mimeTypes = fs
 const updatedNginxConf = fs
   .readFileSync(NGINX_CONF_FILEPATH, "utf-8")
   .replace(/.*gzip_types.*/gm, mimeTypes.join(" "));
-fs.writeFileSync(NGINX_CONF_FILEPATH, updatedNginxConf.join("\n"));
+fs.writeFileSync(NGINX_CONF_FILEPATH, updatedNginxConf);
