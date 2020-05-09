@@ -26,6 +26,7 @@ chmod -R 777 /projects
 
 ## Setup nvm
 1. Install nvm
+- https://github.com/nvm-sh/nvm#install--update-script
 ```Shell
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
@@ -122,3 +123,12 @@ ln -s /projects/cv/build /var/www/cv
 
 ## Setup nginx
 TODO
+
+## Setup firewall
+```Shell
+sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTPS'
+sudo ufw allow 'OpenSSH'
+sudo ufw enable
+sudo ufw status
+```
