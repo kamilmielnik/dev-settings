@@ -171,7 +171,7 @@ mkdir /var/log/scrabble-solver
 touch ~/bin/scrabble-solver-start.sh
 chmod 755 ~/bin/scrabble-solver-start.sh
 echo '#!/bin/bash' >> ~/bin/scrabble-solver-start.sh
-echo 'nohup node /projects/scrabble-solver/dist/scrabble-solver-backend/index.js /projects/scrabble-solver/dictionaries/ </dev/null >/var/log/scrabble-solver/log.log 2>&1 &' >> ~/bin/scrabble-solver-start.sh
+echo "nohup $(which node) /projects/scrabble-solver/dist/scrabble-solver-backend/index.js /projects/scrabble-solver/dictionaries/ </dev/null >/var/log/scrabble-solver/log.log 2>&1 &" >> ~/bin/scrabble-solver-start.sh
 ln -s ~/bin/scrabble-solver-start.sh /usr/bin/scrabble-solver-start
 
 touch ~/bin/scrabble-solver-kill.sh
@@ -181,9 +181,11 @@ echo 'ps aux | grep scrabble | grep node | awk '{print $2}' | xargs kill -9'  >>
 ln -s ~/bin/scrabble-solver-kill.sh /usr/bin/scrabble-solver-kill
 ```
 
-8. Run backend server on startup
+8. Create `scrabble-solver.service` to run backend on system startup
 ```Shell
-echo '@reboot scrabble-solver-start' >> /etc/crontab
+ln -s ~/projects/dev-settings/vps/services/scrabble-solver.service /etc/systemd/system/scrabble-solver.service
+sudo systemctl daemon-reload
+sudo systemctl enable scrabble-solver.service
 ```
 
 9. Run backend server (in the background)
