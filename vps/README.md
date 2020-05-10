@@ -283,4 +283,6 @@ sudo ufw enable -y
 sudo ufw status
 ```
 
-## Reboot VPS
+----
+
+Now, reboot the VPS.
