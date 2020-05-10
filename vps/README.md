@@ -18,6 +18,7 @@ sudo apt-get upgrade -y
 3. Setup common directories
 ```Shell
 mkdir /var/www
+mkdir ~/bin
 mkdir ~/projects
 mkdir /projects
 ```
@@ -155,11 +156,40 @@ npm run build:prod
 ln -s /projects/scrabble-solver/dist/scrabble-solver-frontend /var/www/scrabble-solver
 ```
 
-5. Run backend server
+5. Allow connections to port 5000 in firewall
 ```Shell
-node /projects/scrabble-solver/dist/scrabble-solver-backend/index.js /projects/scrabble-solver/dictionaries/
+sudo ufw allow 5000
 ```
 
+6. Create logs directory
+```Shell
+mkdir /var/log/scrabble-solver
+```
+
+7. Add helpful scripts
+```Shell
+touch ~/bin/scrabble-solver-start.sh
+chmod 755 ~/bin/scrabble-solver-start.sh
+echo '#!/bin/bash' >> ~/bin/scrabble-solver-start.sh
+echo 'nohup node /projects/scrabble-solver/dist/scrabble-solver-backend/index.js /projects/scrabble-solver/dictionaries/ </dev/null >/var/log/scrabble-solver/log.log 2>&1 &' >> ~/bin/scrabble-solver-start.sh
+ln -s ~/bin/scrabble-solver-start.sh /usr/bin/scrabble-solver-start
+
+touch ~/bin/scrabble-solver-kill.sh
+chmod 755 ~/bin/scrabble-solver-kill.sh
+echo '#!/bin/bash' >> ~/bin/scrabble-solver-kill.sh
+echo 'ps aux | grep scrabble | grep node | awk '{print $2}' | xargs kill -9'  >> ~/bin/scrabble-solver-kill.sh
+ln -s ~/bin/scrabble-solver-kill.sh /usr/bin/scrabble-solver-kill
+```
+
+8. Run backend server on startup
+```Shell
+echo '@reboot scrabble-solver-start' >> /etc/crontab
+```
+
+9. Run backend server (in the background)
+```Shell
+scrabble-solver-start
+```
 
 ## Setup nginx + letsencrypt
 1. Install certbot
@@ -252,3 +282,5 @@ sudo ufw enable -y
 # Show firewall status
 sudo ufw status
 ```
+
+## Reboot VPS

@@ -1,0 +1,7 @@
+server {
+    server_name ~^(www\.)?((?<domain>[^\.]+)\.)?kamilmielnik\.(com|pl);
+
+    location / {
+        root /var/www/$domain;
+    }
+}
