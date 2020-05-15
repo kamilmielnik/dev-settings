@@ -1,10 +1,8 @@
 server {
     server_name cv.kamilmielnik.com;
-    root /var/www/cv;
-    index index.html;
 
     location / {
-        try_files $uri $uri/ =404;
+        proxy_pass http://127.0.0.1:3000;
     }
 
     listen 443 ssl http2;

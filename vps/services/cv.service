@@ -1,0 +1,11 @@
+[Unit]
+Description=CV - Next.js server
+
+[Service]
+ExecStart=bash /root/bin/cv-start.sh
+ExecStop=bash /root/bin/cv-stop.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
