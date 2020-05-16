@@ -2,8 +2,8 @@
 Description=Scrabble Solver - backend
 
 [Service]
-ExecStart=bash /usr/bin/scrabble-solver-start.sh
-ExecStop=bash /usr/bin/scrabble-solver-stop.sh
+ExecStart=bash /usr/bin/scrabble-solver-start
+ExecStop=bash /usr/bin/scrabble-solver-stop
 Type=oneshot
 RemainAfterExit=yes
 
