@@ -2,8 +2,8 @@
 Description=CV - Next.js server
 
 [Service]
-ExecStart=bash /root/bin/cv-start.sh
-ExecStop=bash /root/bin/cv-stop.sh
+ExecStart=bash /usr/bin/cv-start.sh
+ExecStop=bash /usr/bin/cv-stop.sh
 Type=oneshot
 RemainAfterExit=yes
 
