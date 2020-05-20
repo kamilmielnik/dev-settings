@@ -23,6 +23,15 @@ mkdir ~/projects
 mkdir /projects
 ```
 
+## Setup node
+https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+
+```Shell
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Now, reboot the VPS.
 
 ## Setup nvm
 1. Install nvm
@@ -122,7 +131,7 @@ npm run build
 mkdir /var/log/cv
 ```
 
-6. Add helpful scripts
+6. Add service scripts to `/usr/bin`
 ```Shell
 chmod 755 ~/projects/dev-settings/vps/bin/cv-start.sh
 ln -s ~/projects/dev-settings/vps/bin/cv-start.sh /usr/bin/cv-start
@@ -138,9 +147,33 @@ sudo systemctl daemon-reload
 sudo systemctl enable cv.service
 ```
 
-8. Run backend server (in the background)
+8. Start the service
 ```Shell
-cv-start
+sudo systemctl start cv.service
+```
+
+### Useful commands
+```Shell
+# show service status
+sudo systemctl status cv.service
+
+# enable the service
+sudo systemctl enable cv.service
+
+# restart the service
+sudo systemctl restart cv.service
+
+# start the service
+sudo systemctl start cv.service
+
+# stop the service
+sudo systemctl stop cv.service
+
+# remove the service
+sudo systemctl disable cv.service
+
+# show logs
+cat /var/log/cv/log.log
 ```
 
 ### Setup [scrabble-solver](https://github.com/kamilmielnik/scrabble-solver)
@@ -187,7 +220,7 @@ sudo ufw allow 5000
 mkdir /var/log/scrabble-solver
 ```
 
-7. Add helpful scripts
+7. Add service scripts to `/usr/bin`
 ```Shell
 chmod 755 ~/projects/dev-settings/vps/bin/scrabble-solver-start.sh
 ln -s ~/projects/dev-settings/vps/bin/scrabble-solver-start.sh /usr/bin/scrabble-solver-start
@@ -203,9 +236,33 @@ sudo systemctl daemon-reload
 sudo systemctl enable scrabble-solver.service
 ```
 
-9. Run backend server (in the background)
+9. Start the service
 ```Shell
-scrabble-solver-start
+sudo systemctl start scrabble-solver.service
+```
+
+### Useful commands
+```Shell
+# show service status
+sudo systemctl status scrabble-solver.service
+
+# enable the service
+sudo systemctl enable scrabble-solver.service
+
+# restart the service
+sudo systemctl restart scrabble-solver.service
+
+# start the service
+sudo systemctl start scrabble-solver.service
+
+# stop the service
+sudo systemctl stop scrabble-solver.service
+
+# remove the service
+sudo systemctl disable scrabble-solver.service
+
+# show logs
+cat /var/log/scrabble-solver/log.log
 ```
 
 ## Setup nginx + letsencrypt
@@ -260,19 +317,19 @@ ln -s ~/projects/dev-settings/vps/nginx/renew-certificates.sh /etc/cron.daily/re
 
 ### Useful commands
 ```Shell
-# check nginx status
-systemctl status nginx
+# show service status
+sudo systemctl status nginx
 
-# stop server
+# stop the service
 sudo systemctl stop nginx
 
-# start server
+# start the service
 sudo systemctl start nginx
 
-# restart server
+# restart the service
 sudo systemctl restart nginx
 
-# reload config
+# reload service config
 sudo systemctl reload nginx
 
 # test config syntax
