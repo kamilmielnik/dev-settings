@@ -2,8 +2,16 @@
 
 For Ubuntu 20.04 on OVH VPS.
 
-1. [#basic-settings](Basic Settings)
-2. [#setup-node](Setup node)
+- [Basic Settings](#basic-settings)
+- [Setup node](#setup-node)
+- [Setup nvm](#setup-nvm)
+- [Setup git](#setup-git)
+- [Setup projects](#setup-projects)
+    - [Setup dev-settings](#setup-dev-settings)
+    - [Setup cv](#setup-cv)
+    - [Setup scrabble-solver](#setup-scrabble-solver)
+- [Setup nginx + letsencrypt](#setup-nginx--letsencrypt)
+- [Setup firewall](#setup-firewall)
 
 ----
 
