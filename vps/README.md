@@ -2,7 +2,7 @@
 
 For Ubuntu 20.04 on OVH VPS.
 
-- [Basic Settings](#basic-settings)
+- [Basic settings](#basic-settings)
 - [Setup node](#setup-node)
 - [Setup nvm](#setup-nvm)
 - [Setup git](#setup-git)
