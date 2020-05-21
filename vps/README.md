@@ -2,7 +2,12 @@
 
 For Ubuntu 20.04 on OVH VPS.
 
+1. [#basic-settings](Basic Settings)
+2. [#setup-node](Setup node)
+
 ----
+
+## Basic settings
 
 1. Change password
 ```Shell
