@@ -13,6 +13,13 @@ For Ubuntu 20.04 on OVH VPS.
 - [Setup nginx + letsencrypt](#setup-nginx--letsencrypt)
 - [Setup firewall](#setup-firewall)
 
+### Useful commands
+
+```Shell
+# upload contents of '~/my-directory' to '/var/www/my-directory' on example.com, assuming target directory exists
+scp -r ~/my-directory/* user@example.com:/var/www/my-directory
+```
+
 ----
 
 ## Basic settings
