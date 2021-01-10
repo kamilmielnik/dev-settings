@@ -1,0 +1,11 @@
+[Unit]
+Description=Scrabble Solver v1 - Backend
+
+[Service]
+ExecStart=bash /usr/bin/scrabble-solver-v1-start
+ExecStop=bash /usr/bin/scrabble-solver-v1-stop
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

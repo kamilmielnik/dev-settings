@@ -1,5 +1,5 @@
 [Unit]
-Description=Scrabble Solver - backend
+Description=Scrabble Solver 2 - Next.js server
 
 [Service]
 ExecStart=bash /usr/bin/scrabble-solver-start
