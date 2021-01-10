@@ -6,7 +6,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header Host $proxy_host;
         proxy_set_header X-NginX-Proxy true;
-        proxy_pass http://127.0.0.1:3000;
+        proxy_pass http://127.0.0.1:3333;
     }
 
     listen 443 ssl http2;
