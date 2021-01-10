@@ -31,8 +31,8 @@ passwd
 
 2. Update packages
 ```Shell
-sudo apt-get update -y
-sudo apt-get upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
 ```
 
 3. Setup common directories
@@ -48,7 +48,7 @@ https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 
 ```Shell
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install -y nodejs
 ```
 
 Now, reboot the VPS.
@@ -126,7 +126,7 @@ ln -s ~/projects/dev-settings/git/.gitconfig ~/.gitconfig
 - https://github.com/puppeteer/puppeteer/issues/4098#issuecomment-568227160
 - https://github.com/puppeteer/puppeteer/issues/5704#issuecomment-618372226
 ```Shell
-sudo apt-get install -y gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm1
+sudo apt install -y gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm1
 ```
 
 2. Clone it
@@ -210,18 +210,19 @@ git checkout v1
 
 4. Install it
 ```Shell
-cd /projects/scrabble-solver/
+cd /projects/scrabble-solver
 npm i
 npm run install-dictionaries
 cd /projects/scrabble-solver/scrabble-solver-backend
 npm i
+sudo apt install -y python2 make g++
 cd /projects/scrabble-solver/scrabble-solver-frontend
 npm i
-cd /projects/scrabble-solver/
 ```
 
 3. Build it
 ```Shell
+cd /projects/scrabble-solver
 npm run build:prod
 ```
 
@@ -289,10 +290,10 @@ cat /var/log/scrabble-solver/log.log
 1. Install certbot
 - https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
 ```Shell
-sudo apt-get install software-properties-common
+sudo apt install software-properties-common
 sudo add-apt-repository universe
-sudo apt-get update
-sudo apt-get install -y certbot
+sudo apt update
+sudo apt install -y certbot
 ```
 
 2. Run certbot
@@ -303,7 +304,7 @@ sudo certbot certonly --standalone
 
 3. Install nginx
 ```Shell
-sudo apt-get install -y nginx
+sudo apt install -y nginx
 ```
 
 4. Replace `nginx.conf`
