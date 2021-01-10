@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ps aux | grep scrabble-scrabble | grep node | awk '{print $2}' | xargs kill -9
+ps aux | grep scrabble-solver | grep node | awk '{print $2}' | xargs kill -9
