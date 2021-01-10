@@ -331,19 +331,27 @@ cat /var/log/scrabble-solver-v1/log.log
 
 ### Setup [scrabble-solver](https://github.com/kamilmielnik/scrabble-solver/)
 
-1. Install it
+1. Clone it
 
 ```Shell
-npm i -g scrabble-solver
+git clone git@github.com:kamilmielnik/scrabble-solver.git /projects/scrabble-solver/
 ```
 
-2. Create logs directory
+2. Install it
+
+```Shell
+cd /projects/scrabble-solver
+npm i
+npm run install:dev
+```
+
+3. Create logs directory
 
 ```Shell
 mkdir /var/log/scrabble-solver
 ```
 
-3. Add service scripts to `/usr/bin`
+4. Add service scripts to `/usr/bin`
 
 ```Shell
 chmod 755 ~/projects/dev-settings/vps/bin/scrabble-solver-start.sh
@@ -353,7 +361,7 @@ chmod 755 ~/projects/dev-settings/vps/bin/scrabble-solver-stop.sh
 ln -s ~/projects/dev-settings/vps/bin/scrabble-solver-stop.sh /usr/bin/scrabble-solver-stop
 ```
 
-7. Create `scrabble-solver.service` to run server on system startup
+5. Create `scrabble-solver.service` to run server on system startup
 
 ```Shell
 ln -s ~/projects/dev-settings/vps/services/scrabble-solver.service /etc/systemd/system/scrabble-solver.service
@@ -361,7 +369,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable scrabble-solver.service
 ```
 
-8. Start the service
+6. Start the service
 
 ```Shell
 sudo systemctl start scrabble-solver.service
